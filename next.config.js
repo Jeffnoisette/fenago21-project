@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  output: 'export', // Enable static export for manual deployment
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/fenago21-project' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/fenago21-project/' : '',
+  distDir: 'out', // Output to 'out' directory for static deployment
   images: {
     unoptimized: true,
     domains: [
