@@ -6,6 +6,12 @@ import Avatar from "../_assets/components/Avatar";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
+export async function generateStaticParams() {
+  return articles.map((article) => ({
+    articleId: article.slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: {
